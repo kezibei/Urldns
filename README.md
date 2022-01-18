@@ -11,7 +11,7 @@
 
 
 目前支持的内置探测类如下，使用all将全部探测，可以将all替换为如下简写进行单独探测，也可以填写自定义的类进行探测。如果想同时探测多个类，用|分割。
-`CommonsCollections13567
+``CommonsCollections13567
 CommonsCollections24
 CommonsBeanutils2
 C3P0
@@ -20,10 +20,10 @@ bsh
 Groovy
 Becl
 Jdk7u21
-winlinux`
+winlinux``
 
 使用ldap模式的all将额外探测如下
-`javax.el.ELProcessor
+``javax.el.ELProcessor
 org.apache.naming.factory.BeanFactory
 groovy.lang.GroovyShell
 groovy.lang.GroovyClassLoader
@@ -37,7 +37,7 @@ org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory
 org.apache.commons.dbcp2.BasicDataSourceFactory
 org.apache.commons.dbcp.BasicDataSourceFactory
 org.apache.tomcat.jdbc.pool.DataSourceFactory
-com.alibaba.druid.pool.DruidDataSourceFactory`
+com.alibaba.druid.pool.DruidDataSourceFactory``
 
 示例: java -jar Urldns.jar base64 "CommonsBeanutils2|C3P0|ognl.OgnlContext" dnslog.com
 
