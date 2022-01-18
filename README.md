@@ -21,8 +21,9 @@ Groovy
 Becl
 Jdk7u21
 winlinux```
+
 使用ldap模式的all将额外探测如下
-javax.el.ELProcessor
+```javax.el.ELProcessor
 org.apache.naming.factory.BeanFactory
 groovy.lang.GroovyShell
 groovy.lang.GroovyClassLoader
@@ -36,7 +37,8 @@ org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory
 org.apache.commons.dbcp2.BasicDataSourceFactory
 org.apache.commons.dbcp.BasicDataSourceFactory
 org.apache.tomcat.jdbc.pool.DataSourceFactory
-com.alibaba.druid.pool.DruidDataSourceFactory
+com.alibaba.druid.pool.DruidDataSourceFactory```
 
 示例: java -jar Urldns.jar base64 "CommonsBeanutils2|C3P0|ognl.OgnlContext" dnslog.com
+
 ldap模式支持ldap://2.2.2.2:1389/jndi，将不再反序列化而是远程加载class，以探测是否出网
