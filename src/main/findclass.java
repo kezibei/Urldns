@@ -16,23 +16,23 @@ import java.util.jar.JarFile;
 public class findclass {
 	public static void main(String[] args) throws Exception {
 		List jarName1 = getJarName("D:\\Downloads\\jar\\commons-beanutils-1.8.0.jar");
-		System.out.println("ç¬¬1ä¸ªjaråŒ…ç±»æ•°é‡: "+jarName1.size());
+		System.out.println("µÚ1¸öjar°üÀàÊıÁ¿: "+jarName1.size());
 		
 		fileWrite("1.txt", jarName1);
 		List jarName2 = getJarName("D:\\Downloads\\jar\\commons-beanutils-1.7.0.jar");
-		System.out.println("ç¬¬2ä¸ªjaråŒ…ç±»æ•°é‡: "+jarName2.size());
+		System.out.println("µÚ2¸öjar°üÀàÊıÁ¿: "+jarName2.size());
 		fileWrite("2.txt", jarName2);
 		
 		List list1_2 = removeAll(jarName1, jarName2);
-		System.out.println("ç¬¬1ä¸ªjaråŒ…ç‹¬ç«‹ç±»: "+list1_2.size());
+		System.out.println("µÚ1¸öjar°ü¶ÀÁ¢Àà: "+list1_2.size());
 		printlist(list1_2);
 		
 		List list2_1 = removeAll(jarName2, jarName1);
-		System.out.println("ç¬¬2ä¸ªjaråŒ…ç‹¬ç«‹ç±»: "+list2_1.size());
+		System.out.println("µÚ2¸öjar°ü¶ÀÁ¢Àà: "+list2_1.size());
 		printlist(list2_1);
 		
 		List list1and2 = retainAll(jarName1, jarName2);
-		System.out.println("2ä¸ªjaråŒ…çš„äº¤é›†ç±»æ•°é‡: "+list1and2.size());
+		System.out.println("2¸öjar°üµÄ½»¼¯ÀàÊıÁ¿: "+list1and2.size());
      }
 	public static List removeAll(List list1, List list2) {
 		List list3 = new ArrayList();
@@ -65,17 +65,17 @@ public class findclass {
 	}
 	public static List getJarName(String jarFile) throws Exception {
 		try{
-			//é€šè¿‡å°†ç»™å®šè·¯å¾„åå­—ç¬¦ä¸²è½¬æ¢ä¸ºæŠ½è±¡è·¯å¾„åæ¥åˆ›å»ºä¸€ä¸ªæ–°Fileå®ä¾‹
+			//Í¨¹ı½«¸ø¶¨Â·¾¶Ãû×Ö·û´®×ª»»Îª³éÏóÂ·¾¶ÃûÀ´´´½¨Ò»¸öĞÂFileÊµÀı
 			File f = new File(jarFile);
 			URL url1 = f.toURI().toURL();
 			URLClassLoader myClassLoader = new URLClassLoader(new URL[]{url1},Thread.currentThread().getContextClassLoader());
-			//é€šè¿‡jarFileå’ŒJarEntryå¾—åˆ°æ‰€æœ‰çš„ç±»
+			//Í¨¹ıjarFileºÍJarEntryµÃµ½ËùÓĞµÄÀà
 			JarFile jar = new JarFile(jarFile);
-			//è¿”å›zipæ–‡ä»¶æ¡ç›®çš„æšä¸¾
+			//·µ»ØzipÎÄ¼şÌõÄ¿µÄÃ¶¾Ù
 			Enumeration<JarEntry> enumFiles = jar.entries();
 			JarEntry entry;
 			List classlist = new ArrayList();
-			//æµ‹è¯•æ­¤æšä¸¾æ˜¯å¦åŒ…å«æ›´å¤šçš„å…ƒç´ 
+			//²âÊÔ´ËÃ¶¾ÙÊÇ·ñ°üº¬¸ü¶àµÄÔªËØ
 			while(enumFiles.hasMoreElements()){
 				entry = (JarEntry)enumFiles.nextElement();
 				if(entry.getName().indexOf("META-INF")<0){
@@ -83,9 +83,9 @@ public class findclass {
 					if(!classFullName.endsWith(".class")){
 						classFullName = classFullName.substring(0,classFullName.length()-1);
 					} else{
-						//å»æ‰åç¼€.class
+						//È¥µôºó×º.class
 						String className = classFullName.substring(0,classFullName.length()-6).replace("/", ".");
-						//æ‰“å°ç±»å
+						//´òÓ¡ÀàÃû
 						classlist.add(className);
 					}
 				}
