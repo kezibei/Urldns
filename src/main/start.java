@@ -4,7 +4,7 @@ package main;
 public class start {
 
 	public static void main(String[] args) {
-    	System.out.println("æ­¤å·¥å…·ä»…èƒ½dnslogæ¼æ´æµ‹è¯•ï¼Œä¸å¯ç”¨äºéæ³•ç”¨é€”ï¼Œæœ‰é—®é¢˜è¯·è”ç³»sonomon@126.com");
+    	System.out.println("´Ë¹¤¾ß½öÄÜdnslogÂ©¶´²âÊÔ£¬²»¿ÉÓÃÓÚ·Ç·¨ÓÃÍ¾£¬ÓĞÎÊÌâÇëÁªÏµsonomon@126.com");
     	//String[] args = {"ldap","ognl.OgnlContext","27e7e4c7.dns.1433.eu.org"};
     	if (args.length == 3){
     		if (args[0].equals("base64")|args[0].equals("file")|args[0].equals("ldap")){
@@ -14,20 +14,20 @@ public class start {
 					e.printStackTrace();
 				}
 			}else {
-				error("é”™è¯¯ï¼ï¼ï¼ç¬¬ä¸€ä¸ªå‚æ•°åªèƒ½è¾“å…¥base64æˆ–è€…fileæˆ–è€…ldap");
+				error("´íÎó£¡£¡£¡µÚÒ»¸ö²ÎÊıÖ»ÄÜÊäÈëbase64»òÕßfile»òÕßldap");
 			}
     	} else {
-    		error("é”™è¯¯ï¼ï¼ï¼å‚æ•°æ•°é‡ä¸å¯¹");
+    		error("´íÎó£¡£¡£¡²ÎÊıÊıÁ¿²»¶Ô");
 		}
 	}
 	private static void error(String eString) {
 		System.out.println(eString);
-    	System.out.println("æœ‰ä¸‰ç§æ¨¡å¼ï¼Œbase64ï¼Œfileï¼Œldapï¼Œfileé»˜è®¤å½“å‰ç›®å½•ç”Ÿæˆæ–‡ä»¶1.serï¼Œldapé»˜è®¤ç«¯å£1389ã€‚\r\n"
-    			+ "è¯·è¾“å…¥: java -jar Urldns.jar base64 all dnslog.com\r\n"
-    			+ "æˆ–è€…   : java -jar Urldns.jar file all dnslog.com\r\n"
-    			+ "æˆ–è€…   : java -jar Urldns.jar ldap all dnslog.com\r\n"
+    	System.out.println("ÓĞÈıÖÖÄ£Ê½£¬base64£¬file£¬ldap£¬fileÄ¬ÈÏµ±Ç°Ä¿Â¼Éú³ÉÎÄ¼ş1.ser£¬ldapÄ¬ÈÏ¶Ë¿Ú1389¡£\r\n"
+    			+ "ÇëÊäÈë: java -jar Urldns.jar base64 all dnslog.com\r\n"
+    			+ "»òÕß   : java -jar Urldns.jar file all dnslog.com\r\n"
+    			+ "»òÕß   : java -jar Urldns.jar ldap all dnslog.com\r\n"
     			+ "\r\n"
-    			+ "ç›®å‰æ”¯æŒçš„å†…ç½®æ¢æµ‹ç±»å¦‚ä¸‹ï¼Œä½¿ç”¨allå°†å…¨éƒ¨æ¢æµ‹ï¼Œå¯ä»¥å°†allæ›¿æ¢ä¸ºå¦‚ä¸‹ç®€å†™è¿›è¡Œå•ç‹¬æ¢æµ‹ï¼Œä¹Ÿå¯ä»¥å¡«å†™è‡ªå®šä¹‰çš„ç±»è¿›è¡Œæ¢æµ‹ã€‚å¦‚æœæƒ³åŒæ—¶æ¢æµ‹å¤šä¸ªç±»ï¼Œç”¨|åˆ†å‰²ã€‚\r\n"
+    			+ "Ä¿Ç°Ö§³ÖµÄÄÚÖÃÌ½²âÀàÈçÏÂ£¬Ê¹ÓÃall½«È«²¿Ì½²â£¬¿ÉÒÔ½«allÌæ»»ÎªÈçÏÂ¼òĞ´½øĞĞµ¥¶ÀÌ½²â£¬Ò²¿ÉÒÔÌîĞ´×Ô¶¨ÒåµÄÀà½øĞĞÌ½²â¡£Èç¹ûÏëÍ¬Ê±Ì½²â¶à¸öÀà£¬ÓÃ|·Ö¸î¡£\r\n"
     			+ "CommonsCollections13567\r\n"
     			+ "CommonsCollections24\r\n"
     			+ "CommonsBeanutils2\r\n"
@@ -38,9 +38,23 @@ public class start {
     			+ "Becl\r\n"
     			+ "Jdk7u21\r\n"
     			+ "winlinux\r\n"
-    			+ "ä½¿ç”¨ldapæ¨¡å¼çš„allå°†é¢å¤–æ¢æµ‹å¦‚ä¸‹\r\n"
+    			+ "Ê¹ÓÃldapÄ£Ê½µÄall½«¶îÍâÌ½²âÈçÏÂ\r\n"
     			+ "javax.el.ELProcessor\r\n"
-    			+ "ç¤ºä¾‹: java -jar Urldns.jar base64 \"CommonsBeanutils2|C3P0|ognl.OgnlContext\" dnslog.com\r\n"
-    			+ "ldapæ¨¡å¼æ”¯æŒldap://2.2.2.2:1389/jndiï¼Œå°†ä¸å†ååºåˆ—åŒ–è€Œæ˜¯è¿œç¨‹åŠ è½½classï¼Œä»¥æ¢æµ‹æ˜¯å¦å‡ºç½‘");
+    			+ "org.apache.naming.factory.BeanFactory\r\n"
+    			+ "groovy.lang.GroovyShell\r\n"
+    			+ "groovy.lang.GroovyClassLoader\r\n"
+    			+ "org.yaml.snakeyaml.Yaml\r\n"
+    			+ "com.thoughtworks.xstream.XStream\r\n"
+    			+ "org.mvel2.sh.ShellSession\r\n"
+    			+ "org.apache.catalina.UserDatabase\r\n"
+    			+ "org.apache.catalina.users.MemoryUserDatabaseFactory\r\n"
+    			+ "org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory\r\n"
+    			+ "org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory\r\n"
+    			+ "org.apache.commons.dbcp2.BasicDataSourceFactory\r\n"
+    			+ "org.apache.commons.dbcp.BasicDataSourceFactory\r\n"
+    			+ "org.apache.tomcat.jdbc.pool.DataSourceFactory\r\n"
+    			+ "com.alibaba.druid.pool.DruidDataSourceFactory\r\n"
+    			+ "Ê¾Àı: java -jar Urldns.jar base64 \"CommonsBeanutils2|C3P0|ognl.OgnlContext\" dnslog.com\r\n"
+    			+ "ldapÄ£Ê½Ö§³Öldap://2.2.2.2:1389/jndi£¬½«²»ÔÙ·´ĞòÁĞ»¯¶øÊÇÔ¶³Ì¼ÓÔØclass£¬ÒÔÌ½²âÊÇ·ñ³öÍø");
 	}
 }
