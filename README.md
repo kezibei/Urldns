@@ -22,21 +22,21 @@ winlinux
 
 使用ldap模式的all将额外探测如下  
 ```
-javax.el.ELProcessor  
-org.apache.naming.factory.BeanFactory  
-groovy.lang.GroovyShell  
-groovy.lang.GroovyClassLoader  
-org.yaml.snakeyaml.Yaml  
-com.thoughtworks.xstream.XStream  
-org.mvel2.sh.ShellSession  
-org.apache.catalina.UserDatabase  
-org.apache.catalina.users.MemoryUserDatabaseFactory  
-org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory  
-org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory  
-org.apache.commons.dbcp2.BasicDataSourceFactory  
-org.apache.commons.dbcp.BasicDataSourceFactory  
-org.apache.tomcat.jdbc.pool.DataSourceFactory  
-com.alibaba.druid.pool.DruidDataSourceFactory  
+javax.el.ELProcessor
+org.apache.naming.factory.BeanFactory
+groovy.lang.GroovyShell
+groovy.lang.GroovyClassLoader
+org.yaml.snakeyaml.Yaml
+com.thoughtworks.xstream.XStream
+org.mvel2.sh.ShellSession
+org.apache.catalina.UserDatabase
+org.apache.catalina.users.MemoryUserDatabaseFactory
+org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory
+org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory
+org.apache.commons.dbcp2.BasicDataSourceFactory
+org.apache.commons.dbcp.BasicDataSourceFactory
+org.apache.tomcat.jdbc.pool.DataSourceFactory
+com.alibaba.druid.pool.DruidDataSourceFactory
 ```
 
 示例: java -jar Urldns.jar base64 "CommonsBeanutils2|C3P0|ognl.OgnlContext" dnslog.com
