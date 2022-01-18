@@ -8,16 +8,16 @@
 
 目前支持的内置探测类如下，使用all将全部探测，可以将all替换为如下简写进行单独探测，也可以填写自定义的类进行探测。如果想同时探测多个类，用|分割。
 ```
-CommonsCollections13567  
-CommonsCollections24  
-CommonsBeanutils2  
-C3P0  
-AspectJWeaver  
-bsh  
-Groovy  
-Becl  
-Jdk7u21  
-winlinux  
+CommonsCollections13567
+CommonsCollections24
+CommonsBeanutils2
+C3P0
+AspectJWeaver
+bsh
+Groovy
+Becl
+Jdk7u21
+winlinux
 ```
 
 使用ldap模式的all将额外探测如下  
