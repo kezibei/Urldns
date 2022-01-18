@@ -16,7 +16,7 @@ bsh
 Groovy  
 Becl  
 Jdk7u21  
-winlinux  ``
+winlinux  `
 
 使用ldap模式的all将额外探测如下  
 `javax.el.ELProcessor  
@@ -33,7 +33,7 @@ org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory
 org.apache.commons.dbcp2.BasicDataSourceFactory  
 org.apache.commons.dbcp.BasicDataSourceFactory  
 org.apache.tomcat.jdbc.pool.DataSourceFactory  
-com.alibaba.druid.pool.DruidDataSourceFactory  ``
+com.alibaba.druid.pool.DruidDataSourceFactory  `
 
 示例: java -jar Urldns.jar base64 "CommonsBeanutils2|C3P0|ognl.OgnlContext" dnslog.com
 
