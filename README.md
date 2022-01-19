@@ -17,6 +17,7 @@ bsh
 Groovy
 Becl
 Jdk7u21
+JRE8u20
 winlinux
 ```
 
@@ -37,6 +38,8 @@ org.apache.commons.dbcp2.BasicDataSourceFactory
 org.apache.commons.dbcp.BasicDataSourceFactory
 org.apache.tomcat.jdbc.pool.DataSourceFactory
 com.alibaba.druid.pool.DruidDataSourceFactory
+com.ibm.ws.client.applicationclient.ClientJ2CCFFactory
+com.ibm.ws.webservices.engine.client.ServiceFactory
 ```
 
 示例: java -jar Urldns.jar base64 "CommonsBeanutils2|C3P0|ognl.OgnlContext" dnslog.com
