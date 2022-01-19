@@ -15,11 +15,11 @@ import java.util.jar.JarFile;
  
 public class findclass {
 	public static void main(String[] args) throws Exception {
-		List jarName1 = getJarName("D:\\Downloads\\jar\\commons-beanutils-1.8.0.jar");
+		List jarName1 = getJarName("C:\\Program Files\\Java\\jdk1.8.0_20\\jre\\lib\\rt.jar");
 		System.out.println("第1个jar包类数量: "+jarName1.size());
 		
 		fileWrite("1.txt", jarName1);
-		List jarName2 = getJarName("D:\\Downloads\\jar\\commons-beanutils-1.7.0.jar");
+		List jarName2 = getJarName("C:\\Program Files\\Java\\jre1.8.0_31\\lib\\rt.jar");
 		System.out.println("第2个jar包类数量: "+jarName2.size());
 		fileWrite("2.txt", jarName2);
 		

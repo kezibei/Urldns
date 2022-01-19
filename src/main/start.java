@@ -4,7 +4,7 @@ package main;
 public class start {
 
 	public static void main(String[] args) {
-    	System.out.println("此工具仅能dnslog漏洞测试，不可用于非法用途，有问题请联系sonomon@126.com");
+    	System.out.println("\r\n此工具仅能dnslog漏洞测试，不可用于非法用途，有问题请联系sonomon@126.com\r\n");
     	//String[] args = {"ldap","ognl.OgnlContext","27e7e4c7.dns.1433.eu.org"};
     	if (args.length == 3){
     		if (args[0].equals("base64")|args[0].equals("file")|args[0].equals("ldap")){
@@ -21,7 +21,7 @@ public class start {
 		}
 	}
 	private static void error(String eString) {
-		System.out.println(eString);
+		System.out.println(eString+"\r\n");
     	System.out.println("有三种模式，base64，file，ldap，file默认当前目录生成文件1.ser，ldap默认端口1389。\r\n"
     			+ "请输入: java -jar Urldns.jar base64 all dnslog.com\r\n"
     			+ "或者   : java -jar Urldns.jar file all dnslog.com\r\n"
@@ -37,6 +37,7 @@ public class start {
     			+ "Groovy\r\n"
     			+ "Becl\r\n"
     			+ "Jdk7u21\r\n"
+    			+ "JRE8u20\r\n"
     			+ "winlinux\r\n"
     			+ "使用ldap模式的all将额外探测如下\r\n"
     			+ "javax.el.ELProcessor\r\n"
@@ -54,6 +55,9 @@ public class start {
     			+ "org.apache.commons.dbcp.BasicDataSourceFactory\r\n"
     			+ "org.apache.tomcat.jdbc.pool.DataSourceFactory\r\n"
     			+ "com.alibaba.druid.pool.DruidDataSourceFactory\r\n"
+    			+ "com.ibm.ws.client.applicationclient.ClientJ2CCFFactory\r\n"
+    			+ "com.ibm.ws.webservices.engine.client.ServiceFactory\r\n"
+    			+ "\r\n"
     			+ "示例: java -jar Urldns.jar base64 \"CommonsBeanutils2|C3P0|ognl.OgnlContext\" dnslog.com\r\n"
     			+ "ldap模式支持ldap://2.2.2.2:1389/jndi，将不再反序列化而是远程加载class，以探测是否出网");
 	}
