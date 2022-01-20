@@ -23,21 +23,29 @@ winlinux
 
 使用ldap模式的all将额外探测如下  
 ```
-javax.el.ELProcessor
+//BeanFactory,配合无参构造和单String方法RCE
 org.apache.naming.factory.BeanFactory
+javax.el.ELProcessor
 groovy.lang.GroovyShell
 groovy.lang.GroovyClassLoader
 org.yaml.snakeyaml.Yaml
 com.thoughtworks.xstream.XStream
+org.xmlpull.v1.XmlPullParserException
+org.xmlpull.mxp1.MXParser
 org.mvel2.sh.ShellSession
+com.sun.glass.utils.NativeLibLoader
+//XXE和条件苛刻的文件写入
 org.apache.catalina.UserDatabase
 org.apache.catalina.users.MemoryUserDatabaseFactory
-org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory
+//h2 RCE
+org.h2.Driver
 org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory
-org.apache.commons.dbcp2.BasicDataSourceFactory
+org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory
 org.apache.commons.dbcp.BasicDataSourceFactory
-org.apache.tomcat.jdbc.pool.DataSourceFactory
+org.apache.commons.pool.KeyedObjectPoolFactoryorg.apache.commons.dbcp2.BasicDataSourceFactory
+org.apache.commons.pool2.PooledObjectFactoryorg.apache.tomcat.jdbc.pool.DataSourceFactory
 com.alibaba.druid.pool.DruidDataSourceFactory
+//WebSphere加载jar RCE
 com.ibm.ws.client.applicationclient.ClientJ2CCFFactory
 com.ibm.ws.webservices.engine.client.ServiceFactory
 ```
