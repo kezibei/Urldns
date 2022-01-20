@@ -34,7 +34,7 @@ org.xmlpull.v1.XmlPullParserException
 org.xmlpull.mxp1.MXParser
 org.mvel2.sh.ShellSession
 com.sun.glass.utils.NativeLibLoader
-//XXE和条件苛刻的文件写入
+//XXE和文件写入
 org.apache.catalina.UserDatabase
 org.apache.catalina.users.MemoryUserDatabaseFactory
 //h2 RCE
