@@ -42,8 +42,10 @@ org.h2.Driver
 org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory
 org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory
 org.apache.commons.dbcp.BasicDataSourceFactory
-org.apache.commons.pool.KeyedObjectPoolFactoryorg.apache.commons.dbcp2.BasicDataSourceFactory
-org.apache.commons.pool2.PooledObjectFactoryorg.apache.tomcat.jdbc.pool.DataSourceFactory
+org.apache.commons.pool.KeyedObjectPoolFactory
+org.apache.commons.dbcp2.BasicDataSourceFactory
+org.apache.commons.pool2.PooledObjectFactory
+org.apache.tomcat.jdbc.pool.DataSourceFactory
 com.alibaba.druid.pool.DruidDataSourceFactory
 //WebSphere加载jar RCE
 com.ibm.ws.client.applicationclient.ClientJ2CCFFactory
