@@ -15,11 +15,11 @@ import java.util.jar.JarFile;
  
 public class findclass {
 	public static void main(String[] args) throws Exception {
-		List jarName1 = getJarName("C:\\Program Files\\Java\\jdk1.8.0_20\\jre\\lib\\rt.jar");
+		List jarName1 = getJarName("D:\\渗透\\java工具集\\常用jar包\\mysql-connector-java-5.1.48.jar");
 		System.out.println("第1个jar包类数量: "+jarName1.size());
 		
 		fileWrite("1.txt", jarName1);
-		List jarName2 = getJarName("C:\\Program Files\\Java\\jre1.8.0_31\\lib\\rt.jar");
+		List jarName2 = getJarName("D:\\Downloads\\workspace\\test\\lib\\mysql-connector-java-5.1.49.jar");
 		System.out.println("第2个jar包类数量: "+jarName2.size());
 		fileWrite("2.txt", jarName2);
 		

