@@ -37,8 +37,13 @@ com.sun.glass.utils.NativeLibLoader
 //XXE和文件写入
 org.apache.catalina.UserDatabase
 org.apache.catalina.users.MemoryUserDatabaseFactory
-//h2 RCE
+//jdbc bypass
 org.h2.Driver
+org.postgresql.Driver
+com.mysql.jdbc.Driver
+com.mysql.cj.jdbc.Driver
+com.mysql.fabric.jdbc.FabricMySQLDriver
+oracle.jdbc.driver.OracleDriver
 org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory
 org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory
 org.apache.commons.dbcp.BasicDataSourceFactory
@@ -46,6 +51,7 @@ org.apache.commons.pool.KeyedObjectPoolFactory
 org.apache.commons.dbcp2.BasicDataSourceFactory
 org.apache.commons.pool2.PooledObjectFactory
 org.apache.tomcat.jdbc.pool.DataSourceFactory
+org.apache.juli.logging.LogFactory
 com.alibaba.druid.pool.DruidDataSourceFactory
 //WebSphere加载jar RCE
 com.ibm.ws.client.applicationclient.ClientJ2CCFFactory
