@@ -18,6 +18,9 @@ Groovy
 Becl
 Jdk7u21
 JRE8u20
+Fastjson1
+Fastjson2
+Jackson1
 winlinux
 ```
 
@@ -59,5 +62,7 @@ com.ibm.ws.webservices.engine.client.ServiceFactory
 ```
 
 示例: java -jar Urldns.jar base64 "CommonsBeanutils2|C3P0|ognl.OgnlContext" dnslog.com
+效果如下图
+
 
 ldap模式支持ldap://2.2.2.2:1389/jndi，将不再反序列化而是远程加载class，以探测是否出网
