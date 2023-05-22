@@ -62,7 +62,11 @@ com.ibm.ws.webservices.engine.client.ServiceFactory
 ```
 
 示例: java -jar Urldns.jar base64 "CommonsBeanutils2|C3P0|ognl.OgnlContext" dnslog.com
+
+常用: java -jar Urldns.jar base64 all dnslog.com
+
 效果如下图
+
 ![图片](https://github.com/kezibei/Urldns/assets/83849145/5ee4ceb6-02d5-472e-8867-01c20a2c7049)
 
 
