@@ -18,9 +18,10 @@ Groovy
 Becl
 Jdk7u21
 JRE8u20
-Fastjson1
-Fastjson2
-Jackson1
+ROME
+Fastjson
+Jackson
+SpringAOP
 winlinux
 ```
 
